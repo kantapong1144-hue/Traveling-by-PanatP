@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Traveling by PP | Explore the World</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#225d77",
+                        "accent": "#DA6249",
+                        "gold": "#C19D6B",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#131b1f",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#121517] dark:text-gray-100 transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#e5e7eb] dark:border-gray-800">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary dark:text-blue-400">
+<span class="material-symbols-outlined text-4xl">travel_explore</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight font-display">Traveling by PP</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Explore</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Culture</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative w-full px-6 lg:px-10 py-8 max-w-[1280px] mx-auto">
+<div class="relative overflow-hidden rounded-3xl min-h-[600px] flex items-center justify-center group">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic wide shot of a world landmark at sunrise" style='background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCV9u_48D1y0Zmv43krw81wXGTHte16p1M6K7IBufu3qtWmEzfsZgt3wTAY2DzNJiSGt8i-H96mny9IkAhE5IyncRPFXeoJDEPbRBstUwdX0WAxoTPbShScVT1-8lBf0x3JNh-MCqX8J3bU1kYtc16FeoltcNVj9myRCGfl8nd9mBk2warQ6haXS2kz8quE1MYWDK3xlaBAP6CKcQEC53M3wtuOuyojHBLSF6pMfxEGJNzSrQwGiJOPifGMeA9nMjLshEahdhTBGAU");'>
+</div>
+<div class="relative z-10 flex flex-col items-center max-w-2xl px-4 text-center">
+<h1 class="text-white text-5xl md:text-7xl font-bold leading-tight mb-8 drop-shadow-lg">
+                            Discover the World’s Hidden Gems
+                        </h1>
+<!-- Floating Search Bar -->
+<div class="w-full max-w-xl bg-white/95 dark:bg-background-dark/95 backdrop-blur p-2 rounded-2xl shadow-2xl flex items-center border border-white/20">
+<div class="flex-1 flex items-center px-4 gap-3">
+<span class="material-symbols-outlined text-gray-400">search</span>
+<input  id="searchInput" class="w-full border-none bg-transparent focus:ring-0 text-gray-800 dark:text-white placeholder:text-gray-400 text-lg" placeholder="Where do you want to go?" type="text"/>
+</div>
+<button id="searchBtn" class="bg-primary hover:bg-primary/90 text-white font-bold h-12 md:h-14 px-8 rounded-xl transition-all flex items-center gap-2">
+<span>Search</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Countries Header -->
+<section class="max-w-[1280px] mx-auto px-6 lg:px-10 pt-20 pb-10">
+<div class="flex items-end justify-between border-b border-gray-200 dark:border-gray-800 pb-6">
+<div>
+<span class="text-accent font-bold uppercase tracking-[0.2em] text-xs mb-2 block">Curated Selection</span>
+<h2 class="text-3xl md:text-4xl font-bold">Trending Countries</h2>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+                        Explore All <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Image Grid -->
+<section class="max-w-[1280px] mx-auto px-6 lg:px-10 pb-20">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Italy -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-[3/4] mb-4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Coastal view of Positano Italy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6SZZKEVInIg29hFa9TojSLOLr6w_6CjADyuexHLxuh4zi98KUYqnHl7t6KktqVU0-B34zrwlnQJOFwNeGmh8ZQFoPeh8Q5g1IuQDTmrxkWAwWOGFwMW0DufNYz02bGjW4iNMZt3YgIWRKq3pvI1rAKQpb1HjvaQKeqc-DokVhn_1whS0nciBg5PKkmQpN8ZF2UTMAVe6qyIlQsYpUmLvqOcm0bc3kY_xZg9nIA9NxZF5q0kSVZGWDEQYujLrBQ2ZRbfsTreSxqzM");'>
+</div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-primary">Europe</div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Italy</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
+                            Experience the timeless art, soulful architecture, and the rich history of the Roman Empire.
+                        </p>
+</div>
+<!-- Japan -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-[3/4] mb-4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Traditional pagoda in Kyoto Japan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTH4MfRYrquGLKO6mfOUZ0ZeNRTYyMZ6-VxSWLFON-aW4vXGDdgoNHMv8ExIJHOf8EWqTFeJX08l7jUUePuUNt6XNGsEDrmbDCCE3AADdrbrFKJV4evUtjEQYCUtSNkmMLYMgzvicQyRL-05qRibkHWnG7RONoINKTz7yn7W89KOK2r-0tvdQOyjTsARN9eh-HEb52oGSiDqYC_Ou580dfM-reIwjp7LIa6wChik86YORPVbM9_Gihae9kxhCF_HvhR8M-EmW1pBU");'>
+</div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-primary">Asia</div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Japan</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
+                            A seamless blend of ancient traditions, serene temples, and cutting-edge urban technology.
+                        </p>
+</div>
+<!-- Morocco -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-[3/4] mb-4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Vibrant market in Marrakech Morocco" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgLpFp4AfdQp39AZ23FS0fqF3ai1sUCTQ5vlwMYJ1NRUiiB6gWscySie4sSn9dxiRUWIFFT7XhXYrD9crfZsyl4YWRarMon2wZtrUDXkSSt8D9xZHW5Fb12YhxYzIUIqGPtA0IUBDxZcQ4rSCpyR0SqAI3ZjiJhg-lQG2dUVr3Ai8IcxBPfqiHGROrQMDYDW97y2idWG2djeihwRSb2YgdL9aQ7sezANTijZmf7X2Iz19nGPc6ZU18S76_Yhd5_TqMHc232flxMrI");'>
+</div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-primary">Africa</div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Morocco</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
+                            A sensory journey through vibrant spice markets, blue cities, and golden Sahara dunes.
+                        </p>
+</div>
+<!-- Peru -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-[3/4] mb-4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="High altitude ruins of Machu Picchu" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAZbD6DHPHuKYrGxpxOvGkdRdlUtzzoDUbg5HDEe-PHg9Bq5fKO73dMU7b4BRxjIoWcclsJzVLkYWSvnteLm77nCg1dqxwXCoh61PnqArjhp63vXWgah03SCu_8zoefXEAqK3XulGFv3vjqf-lRvJb6991yvhu4vJY7F86AM62zlxy0RxY8UAUhkESMZVA9T_5V1N5cKuY7UyKuTbfXUEgn5q6wOK6M_hl7ZoWsUcv7NRBFPICgEj0MzDtbf9AaT1XbjIymKHz028");'>
+</div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-primary">South America</div>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Peru</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
+                            Ascend into the clouds to discover the majestic mystery of Machu Picchu and Incan legacy.
+                        </p>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<button class="flex items-center gap-3 px-10 py-4 border-2 border-gold text-gold hover:bg-gold hover:text-white transition-all font-bold rounded-xl tracking-wide">
+                        View All Destinations
+                        <span class="material-symbols-outlined">public</span>
+</button>
+</div>
+</section>
+<!-- Magazine Style Section -->
+<section class="bg-primary/5 dark:bg-primary/10 py-24 px-6 lg:px-10">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<div class="relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl" data-alt="Traveler exploring ancient ruins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCteX78fkMZRT378r8bSM-WbDmXM4K5TSbRPPoAOgBTyrqZxM1nJTt3nGRhy7Wmgg8_R4bAB8_vbFTAYwqE36-wR4W6p1e4umm1BpAyv9AkzVkOdFUo_i8uXPMiIsSDrRKOY36zbHhcdR_8eEZ6dOYGIxVfhSf-oO6C0pIbRVwGvdvfyTs6Nqke91VxNsnRufwq24QQOg0hbBKj1zBu-V4J_iI7omeeT5yjn8d-fAesd_ai17BzEAmw2tCKueVIlGem32nwPY6TBKU"); background-size: cover; background-position: center;'></div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-white dark:bg-background-dark p-2 rounded-2xl shadow-xl hidden lg:block" data-alt="Close up of a travel map" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvrw5CZgqNT-e21SMVCucULbP_D56waeHCVFKSvBEBpCTkgihbg85BhAr8L5vgHSnvsvUGogDJx0mz85ZXkmlr-aZaKVp4lAUBzqMQPGIkTGQr0nD_g24vTjZchkCzKAk269aHlReKgnS6E-tTm7VzGbCCLWhqy2uGiyXr9Q8QRc2_sUo258j_mMvODArtSPrejHBfG47_Qujh-iCpJxa5NfW32De6zWX1KdAH15cGSKh74n76F5nhUtw4xbtQWGUrHv7THY494XE"); background-size: cover;'></div>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-8">
+<span class="text-accent font-bold uppercase tracking-[0.2em] text-xs">Our Philosophy</span>
+<h2 class="text-4xl md:text-5xl font-bold leading-tight">Travel isn't just about the destination.</h2>
+<p class="text-lg text-gray-600 dark:text-gray-300 font-sans leading-relaxed">
+                            We believe in the power of slow travel. Immersing yourself in local rituals, understanding the weight of history, and bringing home stories that change how you see the world. Our curated guides are designed to help you bypass the ordinary.
+                        </p>
+<div class="flex gap-4">
+<button class="px-8 py-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/30 hover:-translate-y-1 transition-all">Read Our Story</button>
+<button class="px-8 py-4 bg-white dark:bg-gray-800 text-primary dark:text-white rounded-xl font-bold border border-gray-200 dark:border-gray-700 hover:bg-gray-50 transition-all">Travel Tips</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 py-16 px-6 lg:px-10">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">travel_explore</span>
+<h2 class="text-xl font-bold font-display">Traveling by PP</h2>
+</div>
+<p class="text-sm text-gray-500 leading-relaxed mb-6">
+                        Bringing you closer to the world’s most beautiful and culturally rich destinations.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest">Explore</h4>
+<ul class="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Popular Countries</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Hidden Gems</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Travel Guides</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Photo Essays</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest">Support</h4>
+<ul class="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest">Newsletter</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Receive monthly travel inspiration directly in your inbox.</p>
+<div class="flex flex-col gap-2">
+<input class="rounded-xl border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white font-bold py-3 rounded-xl text-sm">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+<p>© 2026 Traveling by PP . All rights reserved.</p>
+<div class="flex gap-8">
+<p>Designed for Discovery</p>
+<p>Global Impact</p>
+</div>
+</div>
+</footer>
+</div>
+<script>
+    const searchInput = document.getElementById("searchInput");
+  
+    searchInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        const value = searchInput.value.toLowerCase().trim();
+  
+        if (value === "thailand") {
+          window.location.href = "thailand.html";
+        } else {
+          alert("Country not found");
+        }
+      }
+    });
+  </script>  
+  <script>
+    const searchBtn = document.getElementById("searchBtn");
+    searchBtn.addEventListener("click", function () {
+      const value = searchInput.value.toLowerCase().trim();
+  
+      if (value === "thailand") {
+        window.location.href = "thailand.html";
+      } else {
+        alert("Country not found");
+      }
+    });
+  </script>
+  <script>
+    searchBtn.addEventListener("click", function () {
+      const value = searchInput.value.toLowerCase().trim();
+  
+      if (value === "thailand") {
+        window.location.href = "thailand.html";
+      } else {
+        alert("Country not found");
+      }
+    });
+  </script>
+</body>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Traveling by PP| Explore Thailand</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#225d77",
+                        "accent": "#c27858",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#131b1f",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-display { font-family: 'Noto Serif', serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #dde2e4; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#121517] dark:text-white transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#dde2e4] dark:border-white/10">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 h-20 flex items-center justify-between">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">explore</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight font-display">Traveling by PP</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors border-b-2 border-primary pb-1" href="#">Destinations</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Experiences</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Travel Tips</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-[#dde2e4]/40 dark:bg-white/5 rounded-full px-4 py-2 border border-transparent focus-within:border-primary/30">
+<span class="material-symbols-outlined text-gray-500 text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-gray-500" placeholder="Search countries..." type="text"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-8">
+<!-- Hero Banner -->
+<section class="relative mb-16">
+<div class="w-full h-[500px] overflow-hidden rounded-xl relative group">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic landscape of Thailand limestone cliffs and turquoise water" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2n2F0soGHRiEbpSjik-bZM9Iz34WD2XHua_YsIyA8G4DvNN_XlD8uOYNtWZ0PIUBBDorELLcTDuLDOShQ-c0evmai_BD3vqMBduJkFmINm6ELQLVNMBOdvodArwxgCdt2To7oN4jDbiZOnY6aFXOr-XnKdc1Tfvg4wCgQGaY7BENziDr97Pl6xA1y6ax4syN3TcL9ZYaOd3yiC3Q8p3z0gHaEPXJMlSOCeAO7hi2DjyyUTkNNEEVz0b0eIu_PvBSQmYoOEDDSMHM');">
+</div>
+<div class="absolute bottom-12 left-12 z-20 text-white">
+<div class="flex items-center gap-2 mb-2 text-accent uppercase tracking-[0.3em] font-bold text-xs">
+<span class="w-8 h-[1px] bg-accent"></span>
+                        South East Asia
+                    </div>
+<h1 class="text-6xl md:text-8xl font-bold mb-4 font-display">Thailand</h1>
+<p class="text-lg md:text-xl font-medium opacity-90 max-w-xl italic">
+                        "The Land of Smiles: Where ancient spirituality meets vibrant modernity."
+                    </p>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Sidebar (Filters) -->
+<aside class="lg:col-span-3 space-y-10 sticky top-28 h-fit">
+<div>
+<h3 class="font-display text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">filter_list</span>
+                        Refine Search
+                    </h3>
+<div class="space-y-8">
+<!-- Experience Filter -->
+<div class="space-y-4">
+<p class="text-xs font-bold uppercase tracking-wider text-gray-400">Experience Type</p>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary bg-transparent border-gray-300" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary">Cultural Heritage</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary bg-transparent border-gray-300" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary">Tropical Beaches</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary bg-transparent border-gray-300" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary">Urban Exploration</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary bg-transparent border-gray-300" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary">Nature &amp; Adventure</span>
+</label>
+</div>
+</div>
+<!-- Sort Options -->
+<div class="space-y-4">
+<p class="text-xs font-bold uppercase tracking-wider text-gray-400">Sort By</p>
+<select class="w-full bg-white dark:bg-white/5 border border-[#dde2e4] dark:border-white/10 rounded-lg text-sm px-4 py-3 focus:ring-primary focus:border-primary">
+<option>Most Popular</option>
+<option>Alphabetical (A-Z)</option>
+<option>Hidden Gems</option>
+<option>Recently Added</option>
+</select>
+</div>
+<!-- Tags -->
+<div class="space-y-4">
+<p class="text-xs font-bold uppercase tracking-wider text-gray-400">Atmosphere</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">Lively</span>
+<span class="px-3 py-1 bg-[#dde2e4]/50 dark:bg-white/10 text-xs font-bold rounded-full">Serene</span>
+<span class="px-3 py-1 bg-[#dde2e4]/50 dark:bg-white/10 text-xs font-bold rounded-full">Historic</span>
+<span class="px-3 py-1 bg-[#dde2e4]/50 dark:bg-white/10 text-xs font-bold rounded-full">Luxury</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 bg-primary rounded-xl text-white space-y-4 relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-sm font-bold opacity-80 uppercase tracking-tighter">Travel Guide</p>
+<h4 class="font-display text-xl font-bold">Need a custom itinerary?</h4>
+<p class="text-xs opacity-90 leading-relaxed">Connect with local experts to plan your perfect Thai adventure.</p>
+<button class="mt-4 bg-white text-primary px-4 py-2 rounded-lg text-xs font-bold w-full hover:bg-opacity-90 transition-all">Talk to an Expert</button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl opacity-10">flight_takeoff</span>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="lg:col-span-9 space-y-16">
+<!-- About Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+<div class="space-y-6">
+<h2 class="text-3xl font-bold font-display leading-tight">The Essence of Thailand</h2>
+<p class="text-[#687a82] dark:text-gray-300 leading-relaxed">
+                            A vibrant fusion of ancient shrines and ultra-modern skyscrapers, Thailand offers a rich tapestry of history, culture, and breathtaking natural beauty. Known as the Land of Smiles, it welcomes travelers with its world-renowned hospitality, aromatic street food, and pristine beaches.
+                        </p>
+<p class="text-[#687a82] dark:text-gray-300 leading-relaxed">
+                            Whether you're seeking the chaotic energy of Bangkok's markets, the spiritual tranquility of Chiang Mai's temples, or the turquoise waters of the Andaman Sea, Thailand provides a sensory experience like no other.
+                        </p>
+</div>
+<div class="bg-white dark:bg-white/5 rounded-2xl border border-[#dde2e4] dark:border-white/10 overflow-hidden shadow-sm">
+<div class="p-6 grid grid-cols-2 gap-y-6">
+<div class="flex flex-col gap-1 border-b border-[#dde2e4] dark:border-white/10 pb-4">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Currency</span>
+<p class="text-sm font-medium">Thai Baht (THB)</p>
+</div>
+<div class="flex flex-col gap-1 border-b border-[#dde2e4] dark:border-white/10 pb-4 pl-4 border-l">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Language</span>
+<p class="text-sm font-medium">Thai (English widely spoken)</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Climate</span>
+<p class="text-sm font-medium">Tropical &amp; Humid</p>
+</div>
+<div class="flex flex-col gap-1 pl-4 border-l border-[#dde2e4] dark:border-white/10">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Best Time</span>
+<p class="text-sm font-medium">November to February</p>
+</div>
+</div>
+<div class="px-6 py-4 bg-primary/5 border-t border-[#dde2e4] dark:border-white/10 flex items-center justify-between">
+<span class="text-xs font-medium text-primary">Map Reference</span>
+<span class="material-symbols-outlined text-primary text-lg" data-location="Thailand">map</span>
+</div>
+</div>
+</section>
+<!-- City Grid -->
+<section>
+<div class="flex items-end justify-between mb-10">
+<div>
+<h2 class="text-3xl font-bold font-display">Popular Cities</h2>
+<p class="text-gray-400 text-sm mt-1">Curated destinations you shouldn't miss</p>
+</div>
+<div class="h-[1px] flex-grow mx-8 bg-[#dde2e4] dark:bg-white/10 hidden md:block"></div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary shrink-0">12 Results Found</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- City Card 1: Bangkok -->
+<div class="group bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-[#dde2e4] dark:border-white/10 hover:shadow-xl transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Modern Bangkok skyline with temples and skyscrapers" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOJjS9DO6_Hzg0rs7-YZApulM2PXMwms7j5aDwn7afq8_BDvZaCjOJZj5HZR97D-dt0uKjBGwoOObC7zjmae8PpvOc-z1-wQrK1KHrcGGZBJwXL_zA65VnEb1L6kYJrlg_4yv-72YU8nABGqVJT0BxGwFP6hy8NbgtBuQKRuL1RNcL4QdkvUTH3O-3L7qGpGfWeE2BL582i7gwpFWfhM-eyFI-PmmEx5PpXhqmjsFPr41KnEzFs9-_l-OGHIcFD57P1AvjL5qsAoE');">
+</div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                    Capital City
+                                </div>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="text-2xl font-bold font-display">Bangkok</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">
+                                    A vibrant fusion of ancient shrines and ultra-modern skyscrapers. Experience the sensory overload of street food markets and grand palaces.
+                                </p>
+<div class="pt-4 flex items-center justify-between border-t border-[#dde2e4] dark:border-white/10">
+<div class="flex items-center gap-1 text-accent">
+<span class="material-symbols-outlined text-sm">hotel</span>
+<span class="text-xs font-bold">Top Luxury</span>
+</div>
+<button class="flex items-center gap-1 text-primary text-sm font-bold group/btn">
+                                        Explore 
+                                        <span class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- City Card 2: Chiang Mai -->
+<div class="group bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-[#dde2e4] dark:border-white/10 hover:shadow-xl transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Golden temple in the mountains of Chiang Mai" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQuV64FyXjw1PlrTCHSSOHMSv3zIdB63VbItt3PdCDBcKL9Hw45va-UytHB8wqLaa9MJd-9bmblRcZnL4Yq8IEB6NCFJd9ZkiGXar1GgzzN-lFu86ZbPi_2WRNTJq6oQHlm3GEkfgaCbyLXyEQ-5ybgoNjw6vsaTfkyvUpi91dWufQLKnKOX_CaxFNrXuIknnKYrzMJDPxB73rZ2q8UjcNAUEWRwUZujxcNCSMuHMmljzVm5FpN3eifQckQNZayw5NDeJcXNpq-J4');">
+</div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                    Cultural Hub
+                                </div>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="text-2xl font-bold font-display">Chiang Mai</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">
+                                    Nestled in the misty mountains of Northern Thailand, this city offers colorful hill tribes, hundreds of elaborate temples, and ethical elephant sanctuaries.
+                                </p>
+<div class="pt-4 flex items-center justify-between border-t border-[#dde2e4] dark:border-white/10">
+<div class="flex items-center gap-1 text-accent">
+<span class="material-symbols-outlined text-sm">spa</span>
+<span class="text-xs font-bold">Wellness</span>
+</div>
+<button class="flex items-center gap-1 text-primary text-sm font-bold group/btn">
+                                        Explore 
+                                        <span class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- City Card 3: Phuket -->
+<div class="group bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-[#dde2e4] dark:border-white/10 hover:shadow-xl transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Tropical beach with limestone rocks and boats" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYIcvpB_s9r1GkvE3-RnG8JrCsRXBF4dEc1B9YpGSH9MkPGDqU5WXRfcKBrK2My_J_y0QUSGk-xwoQH68YdUCgHfpPwy5YR03Ygl69jX9jLLceWmg_t8EKhiV0jweX0JAgiL8v4xs8D8FL5gxMEm8BRGzLzpmbSoCp1Mr9X6kCvPYsmfLywepRSVR2cx8vT3KQyEKep6pFHGA5PvYCqzxtsvjqai7Ph7hTiGvKLSU0i7IVWfr2VHLUBsmMFB7uH24Ogsc7nBU0UaU');">
+</div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                    Beach Paradise
+                                </div>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="text-2xl font-bold font-display">Phuket</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">
+                                    Crystal waters and dramatic limestone cliffs in the Andaman Sea. Phuket is the gateway to Thailand's most legendary islands and vibrant nightlife.
+                                </p>
+<div class="pt-4 flex items-center justify-between border-t border-[#dde2e4] dark:border-white/10">
+<div class="flex items-center gap-1 text-accent">
+<span class="material-symbols-outlined text-sm">surfing</span>
+<span class="text-xs font-bold">Adventure</span>
+</div>
+<a href="phuket.html"
+   class="flex items-center gap-1 text-primary text-sm font-bold group/btn">
+  Explore 
+  <span class="material-symbols-outlined text-lg transition-transform group-hover/btn:translate-x-1">
+    arrow_right_alt
+  </span>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<footer class="bg-[#121517] text-white/60 py-20 mt-20 border-t border-white/5">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 text-white mb-6">
+<div class="size-6 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">explore</span>
+</div>
+<h2 class="text-lg font-bold font-display">Wanderlust</h2>
+</div>
+<p class="text-sm leading-relaxed mb-8">
+                    Discovering the world's most captivating destinations since 2026. Our mission is to inspire and guide modern travelers.
+                </p>
+<div class="flex gap-4">
+<a class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">movie</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Destinations</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary" href="#">Southeast Asia</a></li>
+<li><a class="hover:text-primary" href="#">Northern Europe</a></li>
+<li><a class="hover:text-primary" href="#">Mediterranean</a></li>
+<li><a class="hover:text-primary" href="#">South America</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Company</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary" href="#">Our Story</a></li>
+<li><a class="hover:text-primary" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Newsletter</h4>
+<p class="text-sm mb-4">Get the monthly guide to secret travel spots.</p>
+<div class="flex">
+<input class="bg-white/5 border-none focus:ring-0 rounded-l-lg text-sm px-4 py-2 w-full" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded-r-lg">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 mt-20 pt-8 border-t border-white/5 text-[10px] uppercase tracking-widest text-center">
+            © 2026 Traveling by PP Travel Discovery. All rights reserved.
+        </div>
+</footer>
+</body></html>
